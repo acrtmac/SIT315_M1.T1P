@@ -1,5 +1,4 @@
 int inches = 0;
-int cm = 0;
 long readUltrasonicDistance(int triggerPin, int echoPin)
 {
  pinMode(triggerPin, OUTPUT);
@@ -27,7 +26,7 @@ void loop()
  Serial.print(inches);
  Serial.println("away from the sensor");
  
- if (inches < 5)
+ if (inches < 50)
  {
  digitalWrite(13, HIGH);
  Serial.print('\n'); 
